@@ -35,7 +35,7 @@ def decrypt(message: str, key: str) -> str:
             else:
                 shift = ord('a') #calculates the ASCII value of 'a'
             val = (ord(message[i]) - shift - (ord(key[i].upper()) - ord('A')) + 26) % 26 #calculates the ASCII value of the decrypted character
-            decrypted_message.append(chr(val + shift)) #converst the ASCII value to a character and appends it to the list
+            decrypted_message.append(chr(val + shift)) #converts the ASCII value to a character and appends it to the list
         else:
             decrypted_message.append(message[i])  #appends non-alphabetical characters
     return "".join(decrypted_message)  #joins the list of characters into a string
